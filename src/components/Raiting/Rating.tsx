@@ -79,7 +79,7 @@ type StarPropsType = {
 function Star(props: StarPropsType) {
     if (props.selected === true){
         return (
-            <span><b>star</b></span>
+            <span><b>star </b></span>
         );
     }else{
         return (
