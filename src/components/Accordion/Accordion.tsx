@@ -25,7 +25,6 @@ function AccordionTittle(props: AccordionTittlePropsType) {
     )
 }
 
-
 function AccordionBody() {
     return (
         <ul>

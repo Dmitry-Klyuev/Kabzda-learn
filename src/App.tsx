@@ -1,21 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import Rating from "./components/Raiting/Rating";
-
-
-// function sum(a,b)
+import {OnOff} from "./components/OnOff/OnOff";
+import UnControlledAccordion from "./components/UnControlledAccordion/UnControlledAccordion";
 
 function App() {
+
     return (
         <div>
+            <OnOff />
+            <OnOff />
+
             <PageTitle title={'This is App component'}/>
             <PageTitle title={'My friend'}/>
-
             Article 1
             <Rating value={1} />
             <Accordion title={'Hello'} collapsed={true}/>
             <Accordion title={'My dear fried'} collapsed={false} />
+            
+            <UnControlledAccordion title={'Menu'}/>
+            <UnControlledAccordion title={'Users'}/>
+
             Article 2
             <Rating value={0} />
             <Rating value={1} />
