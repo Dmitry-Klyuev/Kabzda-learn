@@ -4,11 +4,13 @@ import Accordion from "./components/Accordion/Accordion";
 import Rating from "./components/Raiting/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
 import UnControlledAccordion from "./components/UnControlledAccordion/UnControlledAccordion";
+import {OnOffNew} from "./components/OnOff/OnOffNew";
 
 function App() {
 
     return (
         <div>
+            <OnOffNew/>
             <OnOff />
             <OnOff />
 

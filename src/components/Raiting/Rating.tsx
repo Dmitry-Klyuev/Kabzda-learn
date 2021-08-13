@@ -5,7 +5,6 @@ type RatingPropsType = {
 }
 
 function Rating(props: RatingPropsType) {
-    // debugger
 
     return (
         <div>
