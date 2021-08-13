@@ -1,26 +1,23 @@
 import React, {useState} from "react";
 
 export const UnControlledRating = () => {
-    const [state, setState] = useState(true)
+    const [value, setValue] = useState(0)
 
-    const clickStar = () => {
-        setState(!state)
-    }
 
     return (
         <div>
-            <Star state={state} />
-            <Star state={state} clickStar={clickStar}/>
-            <Star state={state} clickStar={clickStar}/>
-            <Star state={state} clickStar={clickStar}/>
-            <Star state={state} clickStar={clickStar}/>
+            <Star selected={value > 0} setValue={ ()=>{setValue(1)}} />
+            <Star selected={value > 1} setValue={ ()=>{setValue(2)}} />
+            <Star selected={value > 2} setValue={ ()=>{setValue(3)}} />
+            <Star selected={value > 3} setValue={ ()=>{setValue(4)}} />
+            <Star selected={value > 4} setValue={ ()=>{setValue(5)}} />
         </div>
     )
 }
 
 type StarType = {
-    state: boolean
-    clickStar: () => void
+    selected: boolean
+    setValue: () => void
 }
 
 function Star(props: StarType) {
@@ -28,7 +25,7 @@ function Star(props: StarType) {
 
     return(
         <>
-        {props.state ? <span onClick={props.clickStar}>star </span> : <span><b>star </b></span>}
+        <span onClick={ ()=> {props.setValue()}}> {props.selected? <b>star</b> : 'star'}</span>
         </>
     )
 }
